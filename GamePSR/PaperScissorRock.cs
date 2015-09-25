@@ -45,7 +45,7 @@ namespace GamePSR
             while (true)
             {
                 Console.WriteLine("Please choice R for Rock, P for paper, or S for scissors: ");
-                string choice = Console.ReadLine();
+                string choice = Console.ReadLine(); Console.Clear();
 
                 while (true)
                 {
