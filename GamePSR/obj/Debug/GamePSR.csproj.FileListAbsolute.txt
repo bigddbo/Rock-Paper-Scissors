@@ -1,0 +1,6 @@
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\bin\Debug\GamePSR.exe.config
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\bin\Debug\GamePSR.exe
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\bin\Debug\GamePSR.pdb
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\obj\Debug\GamePSR.csprojResolveAssemblyReference.cache
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\obj\Debug\GamePSR.exe
+c:\users\bigdd\documents\visual studio 2015\Projects\GamePSR\GamePSR\obj\Debug\GamePSR.pdb
