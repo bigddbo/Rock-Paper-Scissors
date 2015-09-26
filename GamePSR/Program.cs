@@ -10,47 +10,34 @@ namespace GamePSR
     {
         static void Main(string[] args)
         {
-            bool QUIT = false;
-            //do
-            //{
-           
-                
-            
-            Console.WriteLine("Please select one or two player:");//\nEnter Quit to quit:");
+            Console.BackgroundColor = ConsoleColor.Blue; Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Please select one or two player:");
                 string userValue = Console.ReadLine();
-                int a = int.Parse(userValue);
+                int a = Int32.Parse(userValue);
 
                 for (int i = 0; i < 5; i++)
             {
-               //// if (userValue == "QUIT")
-               // {
-               //     break;
-               // }
-            switch (a)
-            {
-                case 2:
+                switch (a)
                 {
-                    PaperScissorRock gameOne = new PaperScissorRock();
-                    gameOne.twoPlayer();
-                    Console.Clear();
-                    break;
+                    case 2:
+                    {
+                        PaperScissorRock gameOne = new PaperScissorRock();
+                        gameOne.twoPlayer();
+                        Console.Clear();
+                        break;
+                    }
+                    case 1:
+                    {
+                        PaperScissorRock game = new PaperScissorRock();
+                        game.computerPlay();
+                        Console.Clear();
+                        break;
+                    }
+
+
                 }
-                case 1:
-                {
-                    PaperScissorRock game = new PaperScissorRock();
-                    game.computerPlay();
-                    Console.Clear();
-                    break;
-                }
-
-
-
             }
-        }
-
-
-          //  } while (QUIT == false);
-        
         }
     }
 }

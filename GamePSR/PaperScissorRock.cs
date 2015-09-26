@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace GamePSR
 {
     class PaperScissorRock
     {
+
+         static void PlaySound(string filePath)
+        {
+            var player = new WMPLib.WindowsMediaPlayer();
+            player.URL = @filePath;
+            player.controls.play();
+        }
+
 
         Random random = new Random();
 
@@ -61,6 +71,10 @@ namespace GamePSR
                     {
                         return "S";
                     }
+                    else if (choice == "D")
+                    {
+                        return "D";
+                    }
                     else
                     {
                         break;
@@ -89,7 +103,7 @@ namespace GamePSR
             }
             else
             {
-                return "Please try again.";
+             return ("Try again");
             }
         }
 
@@ -106,6 +120,10 @@ namespace GamePSR
             else if (choice == "S")
             {
                 return "Scissors";
+            }
+            else if (choice == "D")
+            {
+                return "Dynamite";
             }
             else
             {
@@ -124,6 +142,10 @@ namespace GamePSR
             {
                 Console.WriteLine("Game is tie");
             }
+            else if ((humanInput == "D" && computerInput == "R") || (humanInput == "D" && computerInput == "S") || (humanInput == "D" && computerInput == "P")) 
+            {
+                Console.WriteLine("YOU HAVE FOUND A CHEAT DYNAMITE WINS");
+            }
             else
             {
                 Console.WriteLine("The computer wins");
@@ -140,11 +162,18 @@ namespace GamePSR
             {
                 Console.WriteLine("Game is tie");
             }
+            else if (playerOne == "D")
+            {
+                Console.WriteLine("Player one has dynamite. PLAYER ONE YOU WIN");
+            }
+            else if (playerTwo == "D")
+            {
+                Console.WriteLine("Player two has dynamite. PLAYER TWO YOU WIN");
+            }
             else
             {
                 Console.WriteLine("The player two wins");
             }
         }
-
     }
 }
