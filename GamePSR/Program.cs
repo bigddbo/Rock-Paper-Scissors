@@ -10,6 +10,8 @@ namespace GamePSR
     {
         static void Main(string[] args)
         {
+            try
+            {
             Console.BackgroundColor = ConsoleColor.Blue; Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Please select one or two player:");
@@ -17,26 +19,33 @@ namespace GamePSR
                 int a = Int32.Parse(userValue);
 
                 for (int i = 0; i < 5; i++)
-            {
-                switch (a)
                 {
-                    case 2:
+                    switch (a)
                     {
-                        PaperScissorRock gameOne = new PaperScissorRock();
-                        gameOne.twoPlayer();
-                        Console.Clear();
-                        break;
-                    }
-                    case 1:
-                    {
-                        PaperScissorRock game = new PaperScissorRock();
-                        game.computerPlay();
-                        Console.Clear();
-                        break;
-                    }
+                        case 2:
+                        {
+                            PaperScissorRock gameOne = new PaperScissorRock();
+                            gameOne.twoPlayer();
+                            Console.Clear();
+                            break;
+                        }
+                        case 1:
+                        {
+                            PaperScissorRock game = new PaperScissorRock();
+                            game.computerPlay();
+                            Console.Clear();
+                            break;
+                        }
 
 
+                    }
                 }
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Error-");
+
             }
         }
     }

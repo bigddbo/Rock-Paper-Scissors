@@ -13,12 +13,12 @@ namespace GamePSR
     class PaperScissorRock
     {
 
-         static void PlaySound(string filePath)
-        {
-            var player = new WMPLib.WindowsMediaPlayer();
-            player.URL = @filePath;
-            player.controls.play();
-        }
+       //  static void PlaySound(string filePath)
+       // {
+       //     var player = new WMPLib.WindowsMediaPlayer();
+       //    player.URL = @filePath;
+       //     player.controls.play();
+       // }
 
 
         Random random = new Random();
